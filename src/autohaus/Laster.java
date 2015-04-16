@@ -11,7 +11,6 @@ package autohaus;
  */
 public class Laster extends FahrzeugBasis implements Fahrzeug {
 
-    
     @Override
     public float berechneReichweite() throws Exception {
         float reichweite = super.berechneReichweite();

@@ -10,6 +10,7 @@ package autohaus;
  * @author tim
  */
 public interface Fahrzeug {
+
     float berechneReichweite() throws Exception;
-    
+
 }
