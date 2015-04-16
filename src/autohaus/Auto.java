@@ -13,14 +13,7 @@ public class Auto extends FahrzeugBasis implements Fahrzeug {
 
     @Override
     public String toString() {
-
-        try {
-            return "Auto{" + "farbe=" + getFarbe() + ", tank=" + getTank() + ", verbrauch=" + getVerbrauch() + " ', reichweite=" + berechneReichweite() + "}'";
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
-        return "Fehler";
-
+        return "FahrzeugBasis{" + "tank=" + getTank() + ", verbrauch=" + getVerbrauch() + ", farbe=" + getFarbe() + ", kennzeichen=" + getKennzeichen() + '}';
     }
 
 }

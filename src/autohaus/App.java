@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author tim
  */
-public final class App {
+public final class App extends FahrzeugBasis {
 
     public static void main(String[] args) throws Exception {
 
@@ -24,21 +24,25 @@ public final class App {
         laster.setFarbe("Grün");
         laster.setTank(100);
         laster.setVerbrauch(8f);
+        laster.setKennzeichen("HB 7654");
 
         Auto auto = new Auto();
         auto.setFarbe("Blau");
         auto.setTank(70);
         auto.setVerbrauch(6f);
+        auto.setKennzeichen("HB 1234");
 
         Auto auto1 = new Auto();
         auto1.setFarbe("Rot");
         auto1.setTank(67);
         auto1.setVerbrauch(5.5f);
+        auto1.setKennzeichen("HB 4321");
 
         Auto auto2 = new Auto();
         auto2.setFarbe("Blau");
         auto2.setTank(70);
         auto2.setVerbrauch(1f);
+        auto2.setKennzeichen("HB 5678");
 
         ArrayList<Fahrzeug> a1 = new ArrayList<>();
 
@@ -49,11 +53,14 @@ public final class App {
 
         for (Fahrzeug s : a1) {
             float ergebnis = s.berechneReichweite();
-            System.out.println(ergebnis + "km");
+            if (ergebnis > 1000) {
+                System.out.println(ergebnis + "km");
+                System.out.println(rechneKilometerInMeilenUm(ergebnis) + "mi");
+                System.out.println(s);
 
-            System.out.println(rechneKilometerInMeilenUm(ergebnis) + "mi");
+            }
+
         }
-
     }
 
     public float rechneKilometerInMeilenUm(float kilometer) {

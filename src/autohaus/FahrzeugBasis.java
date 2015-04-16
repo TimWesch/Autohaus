@@ -11,9 +11,23 @@ package autohaus;
  */
 public class FahrzeugBasis implements Fahrzeug {
 
+    @Override
+    public String toString() {
+        return "FahrzeugBasis{" + "tank=" + tank + ", verbrauch=" + verbrauch + ", farbe=" + farbe + ", kennzeichen=" + kennzeichen + '}';
+    }
+
     private float tank;
     private float verbrauch;
     private String farbe;
+    private String kennzeichen;
+
+    public String getKennzeichen() {
+        return kennzeichen;
+    }
+
+    public void setKennzeichen(String kennzeichen) {
+        this.kennzeichen = kennzeichen;
+    }
 
     public String getFarbe() {
         return farbe;
