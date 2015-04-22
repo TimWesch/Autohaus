@@ -51,15 +51,12 @@ public final class App extends FahrzeugBasis {
         a1.add(auto2);
         a1.add(laster);
 
-        for (Fahrzeug s : a1) {
-            float ergebnis = s.berechneReichweite();
-            if (ergebnis > 1000) {
-                System.out.println(ergebnis + "km");
-                System.out.println(rechneKilometerInMeilenUm(ergebnis) + "mi");
-                System.out.println(s);
+        FilterService hubert = new FilterService();
 
-            }
+        ArrayList<Fahrzeug> a1gefiltert = hubert.filter(a1, 2000.0f);
 
+        for (Fahrzeug s : a1gefiltert) {
+            System.out.println(s);
         }
     }
 
